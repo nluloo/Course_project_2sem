@@ -25,35 +25,22 @@ a {
   background-color: transparent;
 }
 
+body {
+  background-color: #1F2527;
+  margin: 0;
+}
+
+body.back {
+  width: 100vw;
+  background-image: url("imgMain/fon.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
 .container {
   width: 100%;
   max-width: 84%;
   margin: 0 auto;
-}
-
-.textt p {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  cursor: pointer;
-}
-
-.right-items {
-  display: flex;
-  justify-content: center;
-}
-
-body {
-  background-color: #1F2527;
-  width: 100vw;
-}
-
-body.ggg {
-  padding: 0px;
-  margin: 0px;
-  background-image: url("fon.png");
-  background-repeat: no-repeat;
-  background-position: center top; /* Центрирование изображения */
 }
 
 header {
@@ -65,20 +52,18 @@ header {
 }
 
 div.logo {
-  background-image: url("logo/LOGO.png");
-  height: 138px;
-  width: 138px;
+  background-image: url("logo/logo.svg");
+  height: 95px;
+  width: 80px;
   background-size: cover;
   mix-blend-mode: lighten;
 }
 
 div.logo1 {
-  background-image: url("logo/LOGO1.png");
-  height: 100px;
-  width: 100px;
+  background-image: url("logo/logo2.svg");
+  height: 80px;
+  width: 80px;
   background-size: cover;
-  top: 0;
-  bottom: 0;
   mix-blend-mode: lighten;
 }
 
@@ -102,24 +87,12 @@ div.logo1 {
   align-items: center;
 }
 
-.right-items {
-  display: flex;
-  gap: 10%;
-}
-
 .film {
   margin-top: 13%;
 }
 
 .film .ButtonAboutFilm {
   margin-top: 3vw;
-}
-
-.firstFilm:hover, button:hover {
-  text-decoration: none;
-  background: #8A877F;
-  cursor: pointer;
-  transition: 0.5s;
 }
 
 .nameFilm .SocialNetwork {
@@ -140,22 +113,308 @@ div.logo1 {
   display: flex;
 }
 
-button, .firstFilm {
+.burger {
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  right: 20px;
+  border-radius: 4px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+}
+
+.burger span {
+  position: relative;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: absolute;
+}
+
+.burger span, .burger span::before, .burger span::after {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  outline: 1px solid transparent;
+  transition-duration: 0.3s;
+}
+
+.burger span::before, .burger span::after {
+  position: absolute;
+  content: "";
+}
+
+.burger span::before {
+  top: -9px;
+}
+
+.burger span::after {
+  top: 9px;
+}
+
+.burger.clicked span {
+  background-color: transparent;
+}
+
+.burger.clicked span::before {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.burger.clicked span::after {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+nav {
+  background-color: #2a2a2a;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  height: 100%;
+  max-width: 35%;
+  width: 100%;
+  padding: 100px 40px 60px 40px;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+nav.show {
+  transform: translateX(0px);
+  z-index: 100;
+}
+
+nav.show ul.main li {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+nav.show ul.main li:nth-child(1) {
+  transition-delay: 0.15s;
+}
+
+nav.show ul.main li:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+nav.show ul.main li:nth-child(3) {
+  transition-delay: 0.45s;
+}
+
+nav.show ul.main li:nth-child(4) {
+  transition-delay: 0.6s;
+}
+
+nav.show ul.main li:nth-child(5) {
+  transition-delay: 0.75s;
+}
+
+nav.show ul.main li:nth-child(6) {
+  transition-delay: 0.9s;
+}
+
+nav.show ul.main li:nth-child(7) {
+  transition-delay: 1.05s;
+}
+
+nav.show ul.main li:nth-child(8) {
+  transition-delay: 1.2s;
+}
+
+nav.show ul.main li:nth-child(9) {
+  transition-delay: 1.35s;
+}
+
+nav.show .about, nav.show .social, nav.show ul.sub {
+  transform: translateY(0px);
+  opacity: 1;
+  transition-delay: 0.85s;
+}
+
+nav ul.main {
+  list-style-type: none;
+}
+
+nav ul.main li {
+  margin-bottom: 20px;
+  transform: translateX(40px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+nav ul.main li a {
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  display: block;
+  letter-spacing: 5px;
+  font-weight: 600;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+}
+
+nav ul.main li a span {
+  color: #b7ac7f;
+}
+
+nav ul.main li a:hover {
+  color: #b7ac7f;
+}
+
+nav .about {
+  margin-top: 40px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+nav .about p {
+  color: #6b6b6b;
+  font-family: "Syne", serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+nav .social {
+  margin-top: 40px;
+  position: relative;
+  padding-bottom: 30px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+nav .social:after {
+  content: "";
+  width: 230px;
+  height: 2px;
+  background-color: #b7ac7f;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+nav .social a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 25px;
+}
+
+nav .social a:hover svg path, nav .social a:hover svg circle {
+  fill: #b7ac7f;
+}
+
+nav .social a svg {
+  width: 100%;
+  height: 100%;
+}
+
+nav ul.sub {
+  list-style-type: none;
+  margin-top: 40px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+nav ul.sub li {
+  margin-bottom: 10px;
+}
+
+nav ul.sub li a {
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav ul.sub li a:hover {
+  color: #b7ac7f;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  background-color: #b7ac7f;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay.show {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+button {
   transition: background 0.5s;
   display: flex;
   width: 20vw;
   height: 5vw;
   color: #494646;
   font-size: 1.7vw;
-  font-style: normal;
-  font-weight: bold;
-  line-height: normal;
+  font-family: Oswald;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
   border-radius: 1.7vw;
   background: #AFA17D;
   border: none;
+}
+button:hover {
+  text-decoration: none;
+  background: #8A877F;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.firstFilm {
+  transition: background 0.5s;
+  display: flex;
+  width: 20vw;
+  height: 5vw;
+  color: #494646;
+  font-size: 1.7vw;
+  font-family: Oswald;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.7vw;
+  background: #AFA17D;
+  border: none;
+}
+.firstFilm:hover {
+  text-decoration: none;
+  background: #8A877F;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.firstBlocks div div p.film-info {
+  font-size: 0.9vw;
+  text-align: justify;
+  letter-spacing: 0.03vw;
 }
 
 .posters {
@@ -167,8 +426,7 @@ button, .firstFilm {
 }
 
 .mainList {
-  margin-bottom: 10vh;
-  height: 100vh;
+  height: 80vh;
 }
 
 .sss {
@@ -194,7 +452,7 @@ button, .firstFilm {
   width: 56vw;
   height: 100%;
   border-radius: 16px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("imgMain/1920x1920.webp") lightgray 50%/cover no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("imgMain/int.webp") lightgray 50%/cover no-repeat;
   box-shadow: 4px 8px 10px 0px rgba(0, 0, 0, 0.3);
   align-items: flex-end;
 }
@@ -364,7 +622,7 @@ button, .firstFilm {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("imgMain/MV5BZjZkNThjNTMtOGU0Ni00ZDliLThmNGUtZmMxNWQ3YzAxZTQ1XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg") lightgray 50%/cover no-repeat;
 }
 
-.first, .second, .t, .four, .five {
+.first, .second, .t, .four, .five, .tleft, .tright {
   width: 100%;
   height: 85%;
 }
@@ -374,11 +632,19 @@ button, .firstFilm {
   bottom: 0;
 }
 
-.t {
+.t, .tleft, .tright {
   position: relative;
   border-radius: 16px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("imgMain/poster116836_2.webp") lightgray 50%/cover no-repeat;
   box-shadow: 4px 8px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.tleft {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("posters/history.webp") lightgray 50%/cover no-repeat;
+}
+
+.tright {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("posters/ss.jpg") lightgray 50%/cover no-repeat;
 }
 
 .FirstFilm, .FiveFilm, .SecondFilm, .TreeFilm, .FourFilm {
@@ -405,13 +671,14 @@ button, .firstFilm {
   white-space: nowrap;
 }
 
-.au {
+.stocks {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: row;
   gap: 13.5%;
   margin-bottom: 7vw;
+  padding-bottom: 7vw;
 }
 
 .textFirst {
@@ -424,6 +691,7 @@ button, .firstFilm {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 .textSecond {
@@ -459,7 +727,8 @@ img {
 }
 
 .application {
-  margin-bottom: 10vw;
+  margin-bottom: 3vw;
+  padding-bottom: 7vw;
 }
 
 .application p {
@@ -537,15 +806,23 @@ footer {
   flex-direction: column;
 }
 
-.textt {
+.footer-text p {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.footer-text {
   flex-wrap: wrap;
   display: flex;
   gap: 1%;
   justify-content: center;
   width: 100%;
+  border-bottom: 1px solid gray;
 }
 
-.textt p {
+.footer-text p {
   color: #FFF;
   font-family: Oswald;
   font-size: 25px;
@@ -662,13 +939,12 @@ select, input {
   border: none;
 }
 
-.film {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+.text, .stocks, .application {
+  border-bottom: 1px solid white;
 }
 
-.film.show {
-  opacity: 1;
+.novently .text {
+  border-bottom: none;
 }
 
 @media (max-width: 1000px) {
@@ -682,17 +958,34 @@ select, input {
     width: 25px;
     height: 32px;
   }
-  body.ggg {
+  body.back {
     background-size: cover;
     height: 50vh;
+    background-image: none;
+  }
+  .rectang {
+    width: 100%;
+    height: 70vh;
+  }
+  .rectang input {
+    font-size: 4vw;
+  }
+  .rectang button {
+    width: 30vw;
+    height: 8vw;
+    font-size: 4vw;
+    border-radius: 2vw;
+  }
+  .application .textFirst {
+    font-size: 3vw;
   }
   .film {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 35%;
-    height: 20%;
+    margin-top: 15%;
+    height: 30%;
   }
   .film p {
     text-align: center;
@@ -701,7 +994,7 @@ select, input {
     display: none;
   }
   .ButtonAboutFilm, .firstFilm {
-    width: 30vw;
+    width: 29vw;
     height: 8vw;
     font-size: 3vw;
     border-radius: 2.5vw;
@@ -711,9 +1004,6 @@ select, input {
   }
   #FilmNovently {
     height: 30vh;
-  }
-  body.ggg {
-    background-image: none;
   }
   .carousel {
     position: absolute;
@@ -796,6 +1086,12 @@ select, input {
   }
 }
 @media (max-width: 640px) {
+  nav.aaa {
+    max-width: 80vw;
+  }
+  nav {
+    padding: 120px 90px 70px 90px;
+  }
   .control {
     top: 20%;
   }
@@ -815,6 +1111,9 @@ select, input {
     line-height: normal;
     letter-spacing: 2.5px;
     width: 14vh;
+  }
+  div.novently #FilmNovently p {
+    font-size: 3vw;
   }
   .rectang {
     width: 100%;
@@ -859,7 +1158,7 @@ select, input {
     font-size: 3vw;
     width: 100%;
   }
-  .au button {
+  div.stocks button {
     width: 23vw;
     height: 7vw;
     border-radius: 2vw;
@@ -890,8 +1189,12 @@ select, input {
     width: 20px;
   }
   div.logo {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 60px;
+  }
+  .footer-text p {
+    width: 20vw;
+    font-size: 2vw;
   }
   .place svg {
     width: 20px;
@@ -906,7 +1209,7 @@ select, input {
     align-items: center;
     flex-direction: column;
     margin-top: 20%;
-    height: 30%;
+    height: 40%;
   }
   .film p {
     text-align: center;
@@ -915,13 +1218,12 @@ select, input {
     display: none;
   }
   .mainList {
-    margin-bottom: 20vw;
     height: 80vw;
   }
-  .au {
+  .stocks {
     flex-direction: column;
   }
-  .au img {
+  .stocks img {
     width: 100%;
     height: 50vw;
     -o-object-fit: cover;
@@ -945,6 +1247,23 @@ select, input {
   }
 }
 @media (max-width: 860px) {
+  h1.film-name {
+    font-size: 3vw;
+    text-align: center;
+  }
+  h2.type-film {
+    font-size: 2vw;
+  }
+  .firstBlocks .film-description {
+    display: none;
+    gap: 4%;
+    height: 60vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .novently #FilmNovently p {
+    font-size: 1.5vw;
+  }
   .firstBlocks div div .dell {
     display: none;
   }
@@ -965,15 +1284,18 @@ select, input {
   }
   div.firstBlocks div div:nth-child(1) {
     height: 20vw;
+    position: inherit;
+    margin-top: 6vw;
   }
-  div.firstBlocks div:nth-child(1) div:nth-child(2) {
-    height: 50vw;
+  .firstBlocks div div.cinema {
+    height: 80vw;
   }
   div.firstBlocks div div:nth-child(n+1) select, input {
     height: 7.5vw;
     font-size: 3.5vw;
     padding-left: 2vw;
     border-radius: 3vw;
+    z-index: 2;
   }
   div.firstBlocks div {
     gap: 10vw;
@@ -982,11 +1304,20 @@ select, input {
     justify-content: center;
     margin: 5vw;
   }
+  .firstBlocks div div p.film-info {
+    font-size: 2vw;
+  }
   div.containerBlock div:nth-child(1) {
     align-items: flex-end;
   }
   div.containerBlock div:nth-child(2) {
     align-items: flex-start;
+  }
+  div.firstBlocks div.right {
+    margin: 0;
+    height: 40vh;
+    justify-content: center;
+    width: 40%;
   }
   .block {
     width: 20vw;
@@ -996,14 +1327,8 @@ select, input {
   div.firstBlocks div div p, div.stageFive p {
     font-size: 3.5vw;
   }
-  .firstBlocks div div:nth-child(2) .containerBlock {
-    margin-top: 10vw;
-  }
   div.firstBlocks div:nth-child(2) div:nth-child(2) div.containerBlock div {
     gap: 6vw;
-  }
-  .mainInfo .rect {
-    gap: 35vw;
   }
   .finish button {
     border-radius: 4vw;
@@ -1014,6 +1339,10 @@ select, input {
   }
   div.firstBlocks {
     height: auto;
+  }
+  div.firstBlocks div div.show-film {
+    height: 30vw;
+    width: 20vw;
   }
 }
 .textFilm {
@@ -1073,7 +1402,6 @@ h1 {
 div.filmAbout {
   background: rgba(73, 70, 70, 0.71);
   width: 70vw;
-  height: 21vw;
   border-radius: 1.5vw;
   margin: 0 auto;
   display: flex;
@@ -1124,6 +1452,11 @@ div.filmAbout {
   display: none;
 }
 
+iframe {
+  margin: 0 auto 5vw auto;
+  border-radius: 10px;
+}
+
 @media (max-width: 1000px) {
   .filmAbout p {
     font-size: 2.2vw;
@@ -1139,8 +1472,14 @@ div.filmAbout {
   .rect svg {
     display: block;
   }
+  iframe {
+    height: 450px;
+  }
 }
 @media (max-width: 640px) {
+  iframe {
+    height: 200px;
+  }
   .rect .textFilm {
     gap: 0;
     margin-bottom: 0;
@@ -1184,7 +1523,7 @@ div.filmAbout {
   .rect img.aboutFilmm {
     height: 60vw;
   }
-  div.rect div.t {
+  div.rect div.t, div.rect div.tright {
     width: 30vw;
     height: 45vw;
     top: -25vw;
@@ -1211,7 +1550,6 @@ div.filmAbout {
 }
 .firstBlocks {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: row;
 }
@@ -1239,13 +1577,18 @@ div.filmAbout {
   display: none;
 }
 
+.right-items {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+
 .firstBlocks div div:nth-child(1) {
   gap: 0;
   height: 11vw;
 }
 
 .firstBlocks div div:nth-child(2) {
-  height: 30vw;
   gap: 0;
 }
 
@@ -1258,6 +1601,10 @@ div.filmAbout {
   flex-direction: row;
 }
 
+.firstBlocks div:nth-child(2) {
+  gap: 5.5vw;
+}
+
 .firstBlocks div:nth-child(2) div:nth-child(2) .containerBlock div {
   gap: 1.25vw;
 }
@@ -1268,6 +1615,7 @@ div.filmAbout {
 
 .rect div.secondBlocks {
   margin: 0 auto;
+  margin-top: 5vw;
   display: flex;
   justify-content: center;
 }
@@ -1277,7 +1625,7 @@ div.filmAbout {
   flex-direction: column;
   width: 100%;
   align-items: center;
-  gap: 5vw;
+  gap: 3vw;
 }
 
 .secondBlocks div:nth-child(2) div div {
@@ -1318,6 +1666,12 @@ div.filmAbout {
   background-color: #7B7B79;
 }
 
+.stageFive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 div.finish {
   margin-bottom: 4vw;
 }
@@ -1335,4 +1689,75 @@ div.finish {
   font-weight: 500;
   line-height: normal;
   letter-spacing: 3px;
+}
+
+.firstBlocks div div.containerBlock div {
+  height: 30vw;
+}
+
+.firstBlocks div div.show-film {
+  border-radius: 16px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) -0.18%, rgba(0, 0, 0, 0) 102.53%), url("imgMain/poster116836_2.webp") lightgray 50%/cover no-repeat;
+  box-shadow: 4px 8px 10px 0px rgba(0, 0, 0, 0.3);
+  position: initial;
+  width: 12vw;
+  height: 17vw;
+  margin: 2vw 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div.right {
+  margin-top: 2vw;
+  width: 60%;
+  gap: 0;
+}
+
+.film-name {
+  font-size: 2vw;
+  margin-left: 0;
+}
+
+.type-film {
+  color: #D7CFBB;
+  text-align: justify;
+  font-family: Oswald;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  margin: 0;
+  border-bottom: 1px solid white;
+  padding-bottom: 0.3vw;
+}
+
+.placeSeet {
+  cursor: pointer;
+}
+
+.info, .price {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5vw;
+  color: #D7CFBB;
+  font-family: "Oswald";
+}
+
+.info p {
+  margin: 0;
+}
+
+.placeSeet.selected {
+  border: 4px solid #D44C4C;
+  box-sizing: border-box;
+}
+
+.mainInfo .rect {
+  padding-bottom: 2vw;
+}
+
+.placeSeet.occupied {
+  background-color: #7B7B79; /* Серый цвет для занятых мест */
+  cursor: not-allowed; /* Запрещаем указатель мыши для занятых мест */
 }

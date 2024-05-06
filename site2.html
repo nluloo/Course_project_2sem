@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Заказ билета</title>
     <link rel="stylesheet" href="sass/style.css">
-    <link rel="stylesheet" href="dist/style.css">
 </head>
 <body>
     <div class="container">
             <header>
-                <a href="main.html">
+                <a href="index.html">
                 <div class="logo"></div>
                 </a>
                 <div class="right-items">
@@ -29,7 +28,7 @@
                 <nav class="aaa">
                     
                     <ul class="main">
-                    <li><a href="main.html" >Главная</a></li>
+                    <li><a href="index.html" >Главная</a></li>
                     <li><a href="secondPage.html">Афиша</a></li>
                     <li><a href="">Заказ билетов</a></li>
                     <li><a href="">Акции</a></li>
@@ -54,27 +53,47 @@
                     <div>
                         <div>
                             <p >ШАГ 1. Выбери кинотеатр:</p>
-                            <select name="list" id="">
-                                <option>Кинотеатр 1</option>
-                                <option>Кинотеатр 2</option>
+                            <select name="list" id="selectCinema"style="
+                            height: 10vw;
+                        ">
+                                <option value = "s0">Кинотеатр 1</option>
+                                <option value="s1">Кинотеатр 2</option>
                             </select>
                         </div>
-                        <div>
+                        <div class="cinema">
                             <p class="dell">ШАГ 3. Выбери фильм</p>
                             <p class="kostyl">ШАГ 2. Выбери фильм:</p>
-                            <select name="list" id="">
-                                <option>Фильм 1</option>
-                                <option>Фильм 2</option>
+                            <select name="list" id="selectFilm">
+                                <option disabled selected>Выберите фильм</option>
+                                <option value = "0">Барби</option>
+                                <option value = "1">Интерстеллар</option>
+                                <option value = "2">Социальная сеть</option>
+                                <option value = "3">Остров проклятых</option>
+                                <option value = "4">Мальчик и птица</option>
+                                <option value = "5">Оставленные</option>
+                                <option value = "6">Бедные-несчастные</option>
+                                <option value = "7">Оппенгеймер</option>
+                                <option value = "8">Реальная история Уиннер</option>
+                                <option value = "9">Туман</option>
                             </select>
-                            <div>
+                            <div id="0" class="film-description" style="display: none; flex-direction: row;">
+                                <div class="show-film" style="background-position: center;"></div>
+                                <div class="right">
+                                    <h1 class="film-name"></h1>
+                                    <h2 class="type-film"></h2>
+                                    <p class="film-info"></p>
+                                </div>
                             </div>
+                            
                         </div>
                     </div>
                     <div>
                         <div>
                             <p class="dell">ШАГ 2. Выбери удобную дату:</p>
                             <p class="kostyl">ШАГ 3. Выбери удобную дату:</p>
-                            <input type="date" id="start" name="trip-start" value="2024-04-16" min="2024-01-01" max="2024-12-31" />
+                            <input type="date" id="start" name="trip-start" value="2024-04-16" min="2024-01-01" max="2024-12-31" style="
+                            height: 10vw;
+                        "/>
                         </div>
                         <div>
                             <p>ШАГ 4. Выбери время сеанса:</p>
@@ -104,124 +123,130 @@
                         <div class="hghg">
                             <div></div>
                             <p>- место занято</p>
-                        </div>
+                        </div>  
                     </div>
+                    <svg width="90%" height="73" viewBox="0 0 1346 73" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: flex; margin-top:2vw;">
+                        <path d="M1 70.2293C509.287 -20.2612 822.154 -21.2238 1344.88 70.2293" stroke="#D44C4C" stroke-width="4"/>
+                        </svg>   
                     </div>
                     <div class = "seet">
                         <div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                            <div class="placeSeet" row="1" index="1"></div>
+                            <div class="placeSeet" row="1" index="2"></div>
+                            <div class="placeSeet" row="1" index="3"></div>
+                            <div class="placeSeet" row="1" index="4"></div>
+                            <div class="placeSeet" row="1" index="5"></div>
+                            <div class="placeSeet" row="1" index="6"></div>
+                            <div class="placeSeet" row="1" index="7"></div>
+                            <div class="placeSeet" row="1" index="8"></div>
+                            <div class="placeSeet" row="1" index="9"></div>
+                            <div class="placeSeet" row="1" index="10"></div>
+                            <div class="placeSeet" row="1" index="11"></div>
+                            <div class="placeSeet" row="1" index="12"></div>
+                            <div class="placeSeet" row="1" index="13"></div>                            
                         </div>
                         <div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                            <div class="placeSeet" row="2" index="1"></div>
+                            <div class="placeSeet" row="2" index="2"></div>
+                            <div class="placeSeet" row="2" index="3"></div>
+                            <div class="placeSeet" row="2" index="4"></div>
+                            <div class="placeSeet" row="2" index="5"></div>
+                            <div class="placeSeet" row="2" index="6"></div>
+                            <div class="placeSeet" row="2" index="7"></div>
+                            <div class="placeSeet" row="2" index="8"></div>
+                            <div class="placeSeet" row="2" index="9"></div>
+                            <div class="placeSeet" row="2" index="10"></div>
+                            <div class="placeSeet" row="2" index="11"></div>
+                            <div class="placeSeet" row="2" index="12"></div>
+                            <div class="placeSeet" row="2" index="13"></div>                            
                         </div>
                         <div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                            <div class="placeSeet" row="3" index="1"></div>
+                            <div class="placeSeet" row="3" index="2"></div>
+                            <div class="placeSeet" row="3" index="3"></div>
+                            <div class="placeSeet" row="3" index="4"></div>
+                            <div class="placeSeet" row="3" index="5"></div>
+                            <div class="placeSeet" row="3" index="6"></div>
+                            <div class="placeSeet" row="3" index="7"></div>
+                            <div class="placeSeet" row="3" index="8"></div>
+                            <div class="placeSeet" row="3" index="9"></div>
+                            <div class="placeSeet" row="3" index="10"></div>
+                            <div class="placeSeet" row="3" index="11"></div>
+                            <div class="placeSeet" row="3" index="12"></div>
+                            <div class="placeSeet" row="3" index="13"></div>                            
                         </div>
                         <div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                            <div class="placeSeet" row="4" index="1"></div>
+                            <div class="placeSeet" row="4" index="2"></div>
+                            <div class="placeSeet" row="4" index="3"></div>
+                            <div class="placeSeet" row="4" index="4"></div>
+                            <div class="placeSeet" row="4" index="5"></div>
+                            <div class="placeSeet" row="4" index="6"></div>
+                            <div class="placeSeet" row="4" index="7"></div>
+                            <div class="placeSeet" row="4" index="8"></div>
+                            <div class="placeSeet" row="4" index="9"></div>
+                            <div class="placeSeet" row="4" index="10"></div>
+                            <div class="placeSeet" row="4" index="11"></div>
+                            <div class="placeSeet" row="4" index="12"></div>
+                            <div class="placeSeet" row="4" index="13"></div>                            
                         </div>
                         <div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                            <div class="placeSeet" row="5" index="1"></div>
+                            <div class="placeSeet" row="5" index="2"></div>
+                            <div class="placeSeet" row="5" index="3"></div>
+                            <div class="placeSeet" row="5" index="4"></div>
+                            <div class="placeSeet" row="5" index="5"></div>
+                            <div class="placeSeet" row="5" index="6"></div>
+                            <div class="placeSeet" row="5" index="7"></div>
+                            <div class="placeSeet" row="5" index="8"></div>
+                            <div class="placeSeet" row="5" index="9"></div>
+                            <div class="placeSeet" row="5" index="10"></div>
+                            <div class="placeSeet" row="5" index="11"></div>
+                            <div class="placeSeet" row="5" index="12"></div>
+                            <div class="placeSeet" row="5" index="13"></div>                            
                         </div>
                         <div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                            <div class="placeSeet" row="6" index="1"></div>
+                            <div class="placeSeet" row="6" index="2"></div>
+                            <div class="placeSeet" row="6" index="3"></div>
+                            <div class="placeSeet" row="6" index="4"></div>
+                            <div class="placeSeet" row="6" index="5"></div>
+                            <div class="placeSeet" row="6" index="6"></div>
+                            <div class="placeSeet" row="6" index="7"></div>
+                            <div class="placeSeet" row="6" index="8"></div>
+                            <div class="placeSeet" row="6" index="9"></div>
+                            <div class="placeSeet" row="6" index="10"></div>
+                            <div class="placeSeet" row="6" index="11"></div>
+                            <div class="placeSeet" row="6" index="12"></div>
+                            <div class="placeSeet" row="6" index="13"></div>                            
                         </div>
                     </div>
-                    <div class="finish">
-                        <button>перейти к оплате</button>
+                    <div class="info">
                     </div>
+                    <p class="price">Итоговая цена: $0</p>
+                </div>
+                <div class="finish" style="margin: 0 auto;">
+                    <button>перейти к оплате</button>
                 </div>
             </div>
         </div>
-        <footer>
-            <div class="logo1"></div>
-            <div class="textt">
-                <p onclick="window.location.href = 'main.html'">Главная</p>
-                <p onclick="window.location.href = 'error.html'">Акции</p>
-                <p onclick="window.location.href = 'error.html'">Афиша</p>
-                <p onclick="window.location.href = 'error.html'">Контакты</p>
-                <p onclick="window.location.href = 'error.html'">О нас</p>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="100vw" height="1" viewBox="0 0 100vw 1" fill="none"class="FooterLine">
-                <path d="M0 0.5L1920 0.5" stroke="#6C6C6C"/>
-            </svg>
-            <p>@ 2024 BSTU inc.</p>
-        </footer>
     </div>
-    
+    <footer>
+        <div class="logo1"></div>
+        <div class="footer-text">
+            <p onclick="window.location.href = 'index.html'">Главная</p>
+            <p onclick="window.location.href = '.stocks'">Акции</p>
+            <p onclick="window.location.href = 'error.html'">Афиша</p>
+            <p onclick="window.location.href = 'error.html'">Контакты</p>
+            <p onclick="window.location.href = 'error.html'">О нас</p>
+        </div>
+        <p>@ 2024 BSTU inc.</p>
+    </footer>
 
-    <script  src="dist/script.js"></script>
+    <script src="sass/place.js">
+    </script>
+    <script src="sass/price.js"></script>
+    <script  src="burger/script.js"></script>
+    <script src="sass/film.js"></script>
 </body>
 </html>

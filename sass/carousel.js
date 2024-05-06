@@ -24,27 +24,12 @@ function move(element) {
     $(nextNextSecond).removeClass().addClass("hideRight");
     $(prevPrevSecond).removeClass().addClass("hideLeft");
 
-
 }
 
 $(document).on('click', '.FirstFilm, .SecondFilm, .FourFilm, .FiveFilm, .hideLeft, .hideRight', function(event) {
     event.stopPropagation();
     event.preventDefault();
     return false;
-});
-
-$(document).keydown(function(e) {
-    switch (e.which) {
-        case 37:
-            move('SecondFilm');
-            break;
-        case 39:
-            move('FourFilm');
-            break;
-        default:
-            return;
-    }
-    e.preventDefault();
 });
 
 $('#prev').click(function() {

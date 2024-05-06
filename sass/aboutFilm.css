@@ -55,7 +55,6 @@ h1 {
 div.filmAbout {
   background: rgba(73, 70, 70, 0.71);
   width: 70vw;
-  height: 21vw;
   border-radius: 1.5vw;
   margin: 0 auto;
   display: flex;
@@ -106,6 +105,11 @@ div.filmAbout {
   display: none;
 }
 
+iframe {
+  margin: 0 auto 5vw auto;
+  border-radius: 10px;
+}
+
 @media (max-width: 1000px) {
   .filmAbout p {
     font-size: 2.2vw;
@@ -121,8 +125,14 @@ div.filmAbout {
   .rect svg {
     display: block;
   }
+  iframe {
+    height: 450px;
+  }
 }
 @media (max-width: 640px) {
+  iframe {
+    height: 200px;
+  }
   .rect .textFilm {
     gap: 0;
     margin-bottom: 0;
@@ -166,7 +176,7 @@ div.filmAbout {
   .rect img.aboutFilmm {
     height: 60vw;
   }
-  div.rect div.t {
+  div.rect div.t, div.rect div.tright {
     width: 30vw;
     height: 45vw;
     top: -25vw;

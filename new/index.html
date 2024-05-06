@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заказ билета</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Заказ билета</h1>
+    <form id="orderForm">
+        <label for="cinema">Кинотеатр:</label>
+        <select id="cinema">
+            <option value="s0">Кинотеатр 1</option>
+            <option value="s1">Кинотеатр 2</option>
+        </select>
+        <br>
+        <label for="film">Фильм:</label>
+        <select id="film">
+            <option value="0">Барби</option>
+            <option value="1">Интерстеллар</option>
+        </select>
+        <br>
+        <label for="time">Время:</label>
+        <input type="time" id="time">
+        <br>
+        <label for="date">Дата:</label>
+        <input type="date" id="date">
+        <br>
+        <label for="seat">Место:</label>
+        <input type="number" id="seat" min="1" max="100">
+        <br>
+        <button type="submit">Сохранить заказ</button>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
