@@ -947,6 +947,14 @@ select, input {
   border-bottom: none;
 }
 
+div button.block.active {
+  background-color: #8A877F;
+}
+
+div.secondBlocks div div div.obs {
+  background-color: #7B7B79;
+}
+
 @media (max-width: 1000px) {
   .mainList {
     height: 100vw;
