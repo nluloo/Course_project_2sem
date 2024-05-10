@@ -703,7 +703,6 @@ button:hover {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  letter-spacing: 3px;
 }
 
 img {
@@ -958,6 +957,9 @@ div.secondBlocks div div div.obs {
 }
 
 @media (max-width: 1000px) {
+  p {
+    letter-spacing: 0.3vw;
+  }
   .mainList {
     height: 100vw;
   }
@@ -1033,6 +1035,9 @@ div.secondBlocks div div div.obs {
     width: 100%;
     left: 0;
     z-index: -1;
+  }
+  .textSecond {
+    font-size: 2vw;
   }
   .control {
     position: relative;
@@ -1154,18 +1159,22 @@ div.secondBlocks div div div.obs {
     align-items: center;
   }
   .text p {
-    font-size: 6vw;
+    font-size: 7vw;
+  }
+  .nameFilm .SocialNetwork {
+    font-size: 7vw;
+    width: 100%;
   }
   .novently .FilmNovently p {
     font-size: 3vw;
   }
   .textFirst {
-    font-size: 4vw;
+    font-size: 5vw;
     width: 100%;
     margin-bottom: 6vw;
   }
   .textSecond {
-    font-size: 3vw;
+    font-size: 4vw;
     width: 100%;
   }
   div.stocks button {
@@ -1204,7 +1213,7 @@ div.secondBlocks div div div.obs {
   }
   .footer-text p {
     width: 20vw;
-    font-size: 2vw;
+    font-size: 4vw;
   }
   .place svg {
     width: 20px;
@@ -1219,7 +1228,7 @@ div.secondBlocks div div div.obs {
     align-items: center;
     flex-direction: column;
     margin-top: 20%;
-    height: 40%;
+    height: 60%;
   }
   .film p {
     text-align: center;
@@ -1469,7 +1478,8 @@ iframe {
 
 @media (max-width: 1000px) {
   .filmAbout p {
-    font-size: 2.2vw;
+    font-size: 3vw;
+    letter-spacing: 0.2vw;
   }
   div.filmAbout {
     height: auto;
@@ -1516,10 +1526,14 @@ iframe {
   .mobile div p:nth-child(1) {
     width: 20vw;
     font-weight: 500;
+    letter-spacing: 0.3vw;
+    font-size: 3vw;
   }
   .mobile p:nth-child(2) {
     width: 45vw;
     font-weight: 300;
+    letter-spacing: 0.3vw;
+    font-size: 3vw;
   }
   .rect .desctop {
     display: none;

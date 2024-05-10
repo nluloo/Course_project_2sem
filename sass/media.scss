@@ -1,4 +1,7 @@
 @media (max-width:1000px) {
+    p{
+        letter-spacing: 0.3vw;
+    }
     .mainList{
         height: 100vw;
     }
@@ -76,7 +79,9 @@
         left: 0;
         z-index: -1;
        }
-       
+       .textSecond{
+        font-size: 2vw;
+       }
        .control {
         position: relative;
         top: 35%;
@@ -205,18 +210,22 @@
         align-items: center;
     }
     .text p{
-        font-size: 6vw;
+        font-size: 7vw;
+    }
+    .nameFilm .SocialNetwork{
+        font-size: 7vw;
+        width: 100%;
     }
     .novently .FilmNovently p{
         font-size: 3vw;
     }
     .textFirst{
-        font-size: 4vw;
+        font-size: 5vw;
         width: 100%;
         margin-bottom: 6vw;
     }
     .textSecond{
-        font-size: 3vw;
+        font-size: 4vw;
         width: 100%;
     }
     div.stocks button{
@@ -255,7 +264,7 @@
     }
     .footer-text p{
         width: 20vw;
-        font-size: 2vw;
+        font-size: 4vw;
     }
     .place svg{
         width: 20px;
@@ -270,7 +279,7 @@
       align-items: center;
       flex-direction: column;
       margin-top: 20%;
-      height: 40%;
+      height: 60%;
     }
     .film p{
       text-align: center;
