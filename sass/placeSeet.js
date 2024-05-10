@@ -13,16 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Функция для обновления классов мест в зависимости от данных в localStorage
     function updateSeatAvailability(cinema, date, time, film, tickets) {
-        console.log("Updating seat availability...");
         document.querySelectorAll('.placeSeet').forEach(function(seat) {
             var row = seat.getAttribute('row');
             var index = seat.getAttribute('index');
             if (checkSeatAvailability(row, index, tickets, cinema, date, time, film)) {
                 seat.classList.add('obs');
-                console.log("Seat at row " + row + ", index " + index + " is occupied.");
             } else {
                 seat.classList.remove('obs');
-                console.log("Seat at row " + row + ", index " + index + " is available.");
             }
         });
     }
@@ -30,13 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Слушаем изменения выбора кинотеатра
     document.getElementById('selectCinema').addEventListener('change', function() {
         var selectedCinema = this.value;
-        console.log("Selected cinema ID: " + selectedCinema);
         var selectedDate = document.getElementById('start').value;
-        console.log("Selected date: " + selectedDate);
         var selectedTime = document.querySelector('.containerBlock button.active').textContent;
-        console.log("Selected time: " + selectedTime);
         var selectedFilm = document.getElementById('selectFilm').options[document.getElementById('selectFilm').selectedIndex].text;
-        console.log("Selected film: " + selectedFilm);
         var previousTickets = JSON.parse(localStorage.getItem('tickets')) || [];
         updateSeatAvailability(selectedCinema, selectedDate, selectedTime, selectedFilm, previousTickets);
     });

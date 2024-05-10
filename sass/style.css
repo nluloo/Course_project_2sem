@@ -866,6 +866,7 @@ footer p {
   border-radius: 40px;
   background: rgba(73, 70, 70, 0.4);
   gap: 2.1%;
+  margin-bottom: 2vw;
 }
 
 .rect div {
@@ -953,6 +954,7 @@ div button.block.active {
 
 div.secondBlocks div div div.obs {
   background-color: #7B7B79;
+  pointer-events: none;
 }
 
 @media (max-width: 1000px) {
@@ -1539,10 +1541,11 @@ iframe {
   }
   .textFilm h1 {
     font-size: 4vw;
+    position: absolute;
     text-align: center;
-    margin-bottom: 10vw;
     margin-top: -5vw;
-    margin-left: 12.5vw;
+    letter-spacing: 0.2vw;
+    width: 40vw;
   }
   .rect .ButtonAboutFilm {
     top: 15vw;

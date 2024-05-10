@@ -864,6 +864,7 @@ footer p {
   border-radius: 40px;
   background: rgba(73, 70, 70, 0.4);
   gap: 2.1%;
+  margin-bottom: 2vw;
 }
 
 .rect div {
@@ -951,4 +952,5 @@ div button.block.active {
 
 div.secondBlocks div div div.obs {
   background-color: #7B7B79;
+  pointer-events: none;
 }

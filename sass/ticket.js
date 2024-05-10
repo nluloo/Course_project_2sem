@@ -52,5 +52,5 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Билеты успешно сохранены!');
     });
 
-    
+    updateSeatAvailability(selectedPlaces[1], selectedPlaces[2], selectedCinema, selectedDate, selectedTime, selectedFilm);
 });
