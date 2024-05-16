@@ -143,7 +143,7 @@ div.finish {
 }
 
 .firstBlocks div div.containerBlock div {
-  height: 30vw;
+  height: 26vw;
 }
 
 .firstBlocks div div.show-film {
@@ -193,6 +193,10 @@ div.right {
   font-size: 2.5vw;
   color: #D7CFBB;
   font-family: "Oswald";
+}
+
+.info {
+  display: none;
 }
 
 .info p {

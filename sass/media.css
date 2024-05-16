@@ -178,6 +178,9 @@
     height: 40vh;
     border-radius: 6vw;
   }
+  div.overlay.show {
+    display: none;
+  }
   .rectang input {
     font-size: 2vw;
     border-radius: 4vw;
@@ -309,16 +312,21 @@
   }
 }
 @media (max-width: 860px) {
+  .seet {
+    width: 100%;
+    align-items: center;
+  }
   h1.film-name {
-    font-size: 3vw;
+    font-size: 4.5vw;
     text-align: center;
   }
   h2.type-film {
-    font-size: 2vw;
+    font-size: 3vw;
   }
   .firstBlocks .film-description {
     display: none;
     gap: 4%;
+    margin-top: 6vw;
     height: 60vw;
     align-items: center;
     justify-content: center;
@@ -345,15 +353,15 @@
     height: 40vw;
   }
   div.firstBlocks div div:nth-child(1) {
-    height: 20vw;
+    height: 25vw;
     position: inherit;
     margin-top: 6vw;
   }
   .firstBlocks div div.cinema {
-    height: 80vw;
+    height: 90vw;
   }
   div.firstBlocks div div:nth-child(n+1) select, input {
-    height: 7.5vw;
+    height: 10vw;
     font-size: 3.5vw;
     padding-left: 2vw;
     border-radius: 3vw;
@@ -366,8 +374,18 @@
     justify-content: center;
     margin: 5vw;
   }
+  p.price {
+    font-size: 4vw;
+  }
+  .info p {
+    font-size: 3.5vw;
+  }
+  div.secondBlocks div:nth-child(2) div div {
+    height: 4.5vw;
+    width: 4.5vw;
+  }
   .firstBlocks div div p.film-info {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
   div.containerBlock div:nth-child(1) {
     align-items: flex-end;
@@ -379,7 +397,7 @@
     margin: 0;
     height: 40vh;
     justify-content: center;
-    width: 40%;
+    width: 50%;
   }
   .block {
     width: 20vw;
@@ -387,7 +405,7 @@
     font-size: 4vw;
   }
   div.firstBlocks div div p, div.stageFive p {
-    font-size: 3.5vw;
+    font-size: 4.5vw;
   }
   div.firstBlocks div:nth-child(2) div:nth-child(2) div.containerBlock div {
     gap: 6vw;
@@ -403,7 +421,7 @@
     height: auto;
   }
   div.firstBlocks div div.show-film {
-    height: 30vw;
-    width: 20vw;
+    height: 45vw;
+    width: 30vw;
   }
 }

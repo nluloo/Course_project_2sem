@@ -69,9 +69,7 @@ div.logo1 {
   color: #FFF;
   font-family: "Oswald", sans-serif;
   font-size: 1.2rem;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 2px;
 }
 
@@ -99,9 +97,7 @@ div.logo1 {
   font-family: "Syne", sans-serif;
   width: 50vw;
   font-size: 4vw;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 1vw;
 }
 
@@ -468,9 +464,7 @@ button:hover {
   color: #FFF;
   font-family: Oswald;
   font-size: 1vw;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 2px;
 }
 
@@ -510,9 +504,7 @@ button:hover {
   font-family: Oswald;
   font-size: 2.1vw;
   margin-bottom: 3px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 4px;
 }
 
@@ -662,9 +654,7 @@ button:hover {
   color: #FFF;
   font-family: Oswald;
   font-size: 1.5vw;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 3px;
   white-space: nowrap;
 }
@@ -685,9 +675,7 @@ button:hover {
   margin-top: 10vw;
   font-family: Oswald;
   font-size: 2.1vw;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 4px;
   text-transform: uppercase;
 }
@@ -698,9 +686,7 @@ button:hover {
   text-align: justify;
   font-family: Oswald;
   font-size: 1.5vw;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
 }
 
 img {
@@ -731,9 +717,7 @@ img {
 .application p {
   color: #FFF;
   font-family: Oswald;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 4px;
 }
 
@@ -743,9 +727,7 @@ img {
   text-align: justify;
   font-family: Oswald;
   font-size: 30px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 3px;
 }
 
@@ -768,9 +750,7 @@ img {
   color: #AFA17D;
   font-size: 2vw;
   font-family: Oswald;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   border: none;
   width: 58%;
   height: 17%;
@@ -781,9 +761,7 @@ img {
   text-align: justify;
   font-family: Oswald;
   font-size: 100%;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
 }
 
 ::placeholder {
@@ -791,9 +769,7 @@ img {
   text-align: justify;
   font-family: Oswald;
   font-size: 100%;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
 }
 
 footer {
@@ -801,13 +777,6 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-.footer-text p {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  cursor: pointer;
 }
 
 .footer-text {
@@ -820,15 +789,18 @@ footer {
 }
 
 .footer-text p {
+  cursor: pointer;
   color: #FFF;
   font-family: Oswald;
   font-size: 25px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   letter-spacing: 2.5px;
   width: 14vh;
   text-align: center;
+  transition: all 0.3s ease-out;
+}
+.footer-text p:hover {
+  color: #AFA17D;
 }
 
 .FooterLine {
@@ -846,9 +818,7 @@ footer p {
   color: #6C6C6C;
   font-family: Oswald;
   font-size: 0.5vw;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 2px;
 }
 
@@ -863,7 +833,7 @@ footer p {
   border-radius: 40px;
   background: rgba(73, 70, 70, 0.4);
   gap: 2.1%;
-  margin-bottom: 2vw;
+  margin-bottom: 6vw;
 }
 
 .rect div {
@@ -883,9 +853,7 @@ select, input {
   text-align: justify;
   font-family: Oswald;
   font-size: 1.5vw;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 3.6px;
   border: none;
 }
@@ -899,9 +867,7 @@ select, input {
   color: #FFF;
   font-family: Oswald;
   font-size: 40px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 4px;
 }
 
@@ -910,9 +876,7 @@ select, input {
   text-align: justify;
   font-family: Oswald;
   font-size: 1.3vw;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 3px;
 }
 

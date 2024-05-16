@@ -71,8 +71,8 @@ div.filmAbout{
 .aboutFilmm{
     height: 40vw;
 }
-.rect .t{
-    height: 27vw;
+.rect .t, .rect .tright{
+    height: 35vw;
 }
 .ButtonAboutFilm{
      left: 53vw;
@@ -191,6 +191,6 @@ iframe{
         z-index: 1;
     }
     h1{
-        font-size: 4vw;
+        font-size: 6vw;
     }
 }

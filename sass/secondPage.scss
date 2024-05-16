@@ -126,7 +126,7 @@ div.finish{
     letter-spacing: 3px;
 }
 .firstBlocks div div.containerBlock div{
-    height: 30vw;
+    height: 26vw;
 }
 .firstBlocks div div.show-film{
     border-radius: 16px;
@@ -171,6 +171,9 @@ div.right{
     font-size: 2.5vw;
     color: #D7CFBB;
     font-family: 'Oswald';
+}
+.info {
+    display: none;
 }
 .info p{
     margin: 0;

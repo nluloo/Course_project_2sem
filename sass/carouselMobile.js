@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             filmName.classList.add('fade-ou');
 
 
-            // Через некоторое время (например, 500 мс), изменяем текст и удаляем класс затухания
+            // Через некоторое время (например, 1000 мс), изменяем текст и удаляем класс затухания
             setTimeout(function() {
                 filmName.innerText = films[index].name;
                 filmName.classList.remove('fade-ou');

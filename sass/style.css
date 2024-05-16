@@ -71,9 +71,7 @@ div.logo1 {
   color: #FFF;
   font-family: "Oswald", sans-serif;
   font-size: 1.2rem;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 2px;
 }
 
@@ -101,9 +99,7 @@ div.logo1 {
   font-family: "Syne", sans-serif;
   width: 50vw;
   font-size: 4vw;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 1vw;
 }
 
@@ -470,9 +466,7 @@ button:hover {
   color: #FFF;
   font-family: Oswald;
   font-size: 1vw;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 2px;
 }
 
@@ -512,9 +506,7 @@ button:hover {
   font-family: Oswald;
   font-size: 2.1vw;
   margin-bottom: 3px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 4px;
 }
 
@@ -664,9 +656,7 @@ button:hover {
   color: #FFF;
   font-family: Oswald;
   font-size: 1.5vw;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 3px;
   white-space: nowrap;
 }
@@ -687,9 +677,7 @@ button:hover {
   margin-top: 10vw;
   font-family: Oswald;
   font-size: 2.1vw;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 4px;
   text-transform: uppercase;
 }
@@ -700,9 +688,7 @@ button:hover {
   text-align: justify;
   font-family: Oswald;
   font-size: 1.5vw;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
 }
 
 img {
@@ -733,9 +719,7 @@ img {
 .application p {
   color: #FFF;
   font-family: Oswald;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 4px;
 }
 
@@ -745,9 +729,7 @@ img {
   text-align: justify;
   font-family: Oswald;
   font-size: 30px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 3px;
 }
 
@@ -770,9 +752,7 @@ img {
   color: #AFA17D;
   font-size: 2vw;
   font-family: Oswald;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   border: none;
   width: 58%;
   height: 17%;
@@ -783,9 +763,7 @@ img {
   text-align: justify;
   font-family: Oswald;
   font-size: 100%;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
 }
 
 ::placeholder {
@@ -793,9 +771,7 @@ img {
   text-align: justify;
   font-family: Oswald;
   font-size: 100%;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
 }
 
 footer {
@@ -803,13 +779,6 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-.footer-text p {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  cursor: pointer;
 }
 
 .footer-text {
@@ -822,15 +791,18 @@ footer {
 }
 
 .footer-text p {
+  cursor: pointer;
   color: #FFF;
   font-family: Oswald;
   font-size: 25px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   letter-spacing: 2.5px;
   width: 14vh;
   text-align: center;
+  transition: all 0.3s ease-out;
+}
+.footer-text p:hover {
+  color: #AFA17D;
 }
 
 .FooterLine {
@@ -848,9 +820,7 @@ footer p {
   color: #6C6C6C;
   font-family: Oswald;
   font-size: 0.5vw;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 2px;
 }
 
@@ -865,7 +835,7 @@ footer p {
   border-radius: 40px;
   background: rgba(73, 70, 70, 0.4);
   gap: 2.1%;
-  margin-bottom: 2vw;
+  margin-bottom: 6vw;
 }
 
 .rect div {
@@ -885,9 +855,7 @@ select, input {
   text-align: justify;
   font-family: Oswald;
   font-size: 1.5vw;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 3.6px;
   border: none;
 }
@@ -901,9 +869,7 @@ select, input {
   color: #FFF;
   font-family: Oswald;
   font-size: 40px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 4px;
 }
 
@@ -912,9 +878,7 @@ select, input {
   text-align: justify;
   font-family: Oswald;
   font-size: 1.3vw;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 3px;
 }
 
@@ -1135,6 +1099,9 @@ div.secondBlocks div div div.obs {
     height: 40vh;
     border-radius: 6vw;
   }
+  div.overlay.show {
+    display: none;
+  }
   .rectang input {
     font-size: 2vw;
     border-radius: 4vw;
@@ -1266,16 +1233,21 @@ div.secondBlocks div div div.obs {
   }
 }
 @media (max-width: 860px) {
+  .seet {
+    width: 100%;
+    align-items: center;
+  }
   h1.film-name {
-    font-size: 3vw;
+    font-size: 4.5vw;
     text-align: center;
   }
   h2.type-film {
-    font-size: 2vw;
+    font-size: 3vw;
   }
   .firstBlocks .film-description {
     display: none;
     gap: 4%;
+    margin-top: 6vw;
     height: 60vw;
     align-items: center;
     justify-content: center;
@@ -1302,15 +1274,15 @@ div.secondBlocks div div div.obs {
     height: 40vw;
   }
   div.firstBlocks div div:nth-child(1) {
-    height: 20vw;
+    height: 25vw;
     position: inherit;
     margin-top: 6vw;
   }
   .firstBlocks div div.cinema {
-    height: 80vw;
+    height: 90vw;
   }
   div.firstBlocks div div:nth-child(n+1) select, input {
-    height: 7.5vw;
+    height: 10vw;
     font-size: 3.5vw;
     padding-left: 2vw;
     border-radius: 3vw;
@@ -1323,8 +1295,18 @@ div.secondBlocks div div div.obs {
     justify-content: center;
     margin: 5vw;
   }
+  p.price {
+    font-size: 4vw;
+  }
+  .info p {
+    font-size: 3.5vw;
+  }
+  div.secondBlocks div:nth-child(2) div div {
+    height: 4.5vw;
+    width: 4.5vw;
+  }
   .firstBlocks div div p.film-info {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
   div.containerBlock div:nth-child(1) {
     align-items: flex-end;
@@ -1336,7 +1318,7 @@ div.secondBlocks div div div.obs {
     margin: 0;
     height: 40vh;
     justify-content: center;
-    width: 40%;
+    width: 50%;
   }
   .block {
     width: 20vw;
@@ -1344,7 +1326,7 @@ div.secondBlocks div div div.obs {
     font-size: 4vw;
   }
   div.firstBlocks div div p, div.stageFive p {
-    font-size: 3.5vw;
+    font-size: 4.5vw;
   }
   div.firstBlocks div:nth-child(2) div:nth-child(2) div.containerBlock div {
     gap: 6vw;
@@ -1360,8 +1342,8 @@ div.secondBlocks div div div.obs {
     height: auto;
   }
   div.firstBlocks div div.show-film {
-    height: 30vw;
-    width: 20vw;
+    height: 45vw;
+    width: 30vw;
   }
 }
 .textFilm {
@@ -1447,8 +1429,8 @@ div.filmAbout {
   height: 40vw;
 }
 
-.rect .t {
-  height: 27vw;
+.rect .t, .rect .tright {
+  height: 35vw;
 }
 
 .ButtonAboutFilm {
@@ -1570,7 +1552,7 @@ iframe {
     z-index: 1;
   }
   h1 {
-    font-size: 4vw;
+    font-size: 6vw;
   }
 }
 .firstBlocks {
@@ -1717,7 +1699,7 @@ div.finish {
 }
 
 .firstBlocks div div.containerBlock div {
-  height: 30vw;
+  height: 26vw;
 }
 
 .firstBlocks div div.show-film {
@@ -1767,6 +1749,10 @@ div.right {
   font-size: 2.5vw;
   color: #D7CFBB;
   font-family: "Oswald";
+}
+
+.info {
+  display: none;
 }
 
 .info p {
