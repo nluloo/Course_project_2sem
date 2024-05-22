@@ -13,28 +13,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     controls.forEach(function(control, index) {
         control.addEventListener('click', function(event) {
-            // Сначала удаляем класс active у всех ссылок
             controls.forEach(function(control) {
                 control.classList.remove('active');
             });
 
-            // Добавляем класс active только к текущей нажатой ссылке
             control.classList.add('active');
 
-            // Скрываем все изображения
             contents.forEach(function(content) {
                 content.classList.remove('active');
             });
 
-            // Показываем только активное изображение
             var activeContent = document.querySelector('.images .content[data-index="' + index + '"]');
             activeContent.classList.add('active');
 
-            // Плавно изменяем текст
             filmName.classList.add('fade-ou');
 
-
-            // Через некоторое время (например, 1000 мс), изменяем текст и удаляем класс затухания
             setTimeout(function() {
                 filmName.innerText = films[index].name;
                 filmName.classList.remove('fade-ou');

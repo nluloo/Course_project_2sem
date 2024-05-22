@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Функция для проверки, занято ли место
     function checkSeatAvailability(row, index, tickets, cinema,date, time, film) {
         return tickets.some(function(ticket) {
             return ticket.place.row === row &&
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Функция для обновления классов мест в зависимости от данных в localStorage
     function updateSeatAvailability(cinema, date, time, film, tickets) {
         document.querySelectorAll('.placeSeet').forEach(function(seat) {
             var row = seat.getAttribute('row');
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Слушаем изменения выбора кинотеатра
     document.getElementById('selectCinema').addEventListener('change', function() {
         var selectedCinema = this.value;
         var selectedDate = document.getElementById('start').value;
@@ -34,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateSeatAvailability(selectedCinema, selectedDate, selectedTime, selectedFilm, previousTickets);
     });
 
-    // Слушаем изменения выбора даты
     document.getElementById('start').addEventListener('change', function() {
         var selectedCinema = document.getElementById('selectCinema').value;
         console.log("Selected cinema ID: " + selectedCinema);
@@ -48,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateSeatAvailability(selectedCinema, selectedDate, selectedTime, selectedFilm, previousTickets);
     });
 
-    // Слушаем изменения выбора времени
     document.querySelectorAll('.containerBlock button').forEach(function(button) {
         button.addEventListener('click', function() {
             var selectedCinema = document.getElementById('selectCinema').value;
@@ -64,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Слушаем изменения выбора фильма
     document.getElementById('selectFilm').addEventListener('change', function() {
         var selectedCinema = document.getElementById('selectCinema').value;
         console.log("Selected cinema ID: " + selectedCinema);
